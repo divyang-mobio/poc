@@ -55,7 +55,7 @@ class _SafeScreenState extends State<SafeScreen> {
                           ? Padding(
                               padding: const EdgeInsets.all(5.0),
                               child: ListTile(
-                                leading: const Icon(Icons.favorite, size: 35),
+                                leading: Icon(iconData[index], size: 35),
                                 shape: const UnderlineInputBorder(),
                                 title: Text(
                                   safeModel?.properties?[index].title ?? "",
@@ -67,9 +67,13 @@ class _SafeScreenState extends State<SafeScreen> {
                                 subtitle: SizedBox(
                                   child: DropdownButtonHideUnderline(
                                     child: DropdownButton(
-                                      hint: Text(safeModel?.properties?[index].hint ?? ""),
-                                      icon: const Icon(Icons.keyboard_arrow_down),
-                                       items: safeModel?.properties?[index].options
+                                      hint: Text(
+                                          safeModel?.properties?[index].hint ??
+                                              ""),
+                                      icon:
+                                          const Icon(Icons.keyboard_arrow_down),
+                                      items: safeModel
+                                          ?.properties?[index].options
                                           ?.map((items) {
                                         return DropdownMenuItem(
                                           value: items.title,
@@ -83,24 +87,45 @@ class _SafeScreenState extends State<SafeScreen> {
                                 ),
                               ),
                             )
-                          : Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: ListTile(
-                                leading: const Icon(Icons.favorite, size: 35),
-                                shape: const UnderlineInputBorder(),
-                                title: Text(
-                                  safeModel?.properties?[index].title ?? "",
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                subtitle: TextField(
-                                  decoration: InputDecoration(
-                                      border: InputBorder.none,
-                                      hintText:
-                                          safeModel?.properties?[index].hint),
-                                ),
-                              ),
-                            )),
+                          : (safeModel?.properties?[index].type == "chekbox")
+                              ? Padding(
+                                  padding: const EdgeInsets.all(5.0),
+                                  child: ListTile(
+                                    leading: Checkbox(
+                                      checkColor: Colors.white,
+                                      value: safeModel
+                                          ?.properties?[index].isSelected,
+                                      onChanged: (bool? value) {},
+                                    ),
+                                    shape: const UnderlineInputBorder(),
+                                    title: Text(
+                                      safeModel?.properties?[index].title ?? "",
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    subtitle: Text(
+                                        safeModel?.properties?[index].hint ??
+                                            ""),
+                                  ),
+                                )
+                              : Padding(
+                                  padding: const EdgeInsets.all(5.0),
+                                  child: ListTile(
+                                    leading: Icon(iconData[index], size: 35),
+                                    shape: const UnderlineInputBorder(),
+                                    title: Text(
+                                      safeModel?.properties?[index].title ?? "",
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    subtitle: TextField(
+                                      decoration: InputDecoration(
+                                          border: InputBorder.none,
+                                          hintText: safeModel
+                                              ?.properties?[index].hint),
+                                    ),
+                                  ),
+                                )),
                   const SizedBox(height: 10),
                   ...?safeModel?.buttons?.map((e) => materialButton(context,
                       onPressed: () {},
@@ -127,3 +152,12 @@ materialButton(context,
             style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20))),
   );
 }
+
+List<IconData> iconData = [
+  Icons.person_rounded,
+  Icons.category,
+  Icons.directions_run_outlined,
+  Icons.description,
+  Icons.description,
+  Icons.description
+];

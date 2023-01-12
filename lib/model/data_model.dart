@@ -3,6 +3,7 @@ class SafeModel {
   String? description;
   String? type;
   String? screenId;
+  bool? isSafe;
   String? color;
   List<Properties>? properties;
   List<Buttons>? buttons;
@@ -12,6 +13,7 @@ class SafeModel {
       this.description,
       this.type,
       this.screenId,
+      this.isSafe,
       this.color,
       this.properties,
       this.buttons});
@@ -21,6 +23,7 @@ class SafeModel {
     description = json['description'];
     type = json['type'];
     screenId = json['screenId'];
+    isSafe = json['isSafe'];
     color = json['color'];
     if (json['properties'] != null) {
       properties = <Properties>[];
@@ -42,6 +45,7 @@ class SafeModel {
     data['description'] = description;
     data['type'] = type;
     data['screenId'] = screenId;
+    data['isSafe'] = isSafe;
     data['color'] = color;
     if (properties != null) {
       data['properties'] = properties!.map((v) => v.toJson()).toList();
@@ -60,7 +64,9 @@ class Properties {
   String? id;
   String? hint;
   String? isRequired;
+  bool? isSafe;
   List<Options>? options;
+  bool? isSelected;
 
   Properties(
       {this.type,
@@ -69,7 +75,9 @@ class Properties {
       this.id,
       this.hint,
       this.isRequired,
-      this.options});
+      this.isSafe,
+      this.options,
+      this.isSelected});
 
   Properties.fromJson(Map<String, dynamic> json) {
     type = json['type'];
@@ -78,12 +86,14 @@ class Properties {
     id = json['id'];
     hint = json['hint'];
     isRequired = json['IsRequired'];
+    isSafe = json['isSafe'];
     if (json['options'] != null) {
       options = <Options>[];
       json['options'].forEach((v) {
         options!.add(Options.fromJson(v));
       });
     }
+    isSelected = json['IsSelected'];
   }
 
   Map<String, dynamic> toJson() {
@@ -94,9 +104,11 @@ class Properties {
     data['id'] = id;
     data['hint'] = hint;
     data['IsRequired'] = isRequired;
+    data['isSafe'] = isSafe;
     if (options != null) {
       data['options'] = options!.map((v) => v.toJson()).toList();
     }
+    data['IsSelected'] = isSelected;
     return data;
   }
 }

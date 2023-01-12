@@ -1,145 +1,173 @@
 {
-   "title":"Safe",
-   "description":"A simple form to register GOT fans",
-   "type":"form",
-   "screenId":"Safe_01",
-   "color":"009E3D",
-   "properties":[
+   "title": "Safe",
+   "description": "A simple form to register GOT fans",
+   "type": "form",
+   "screenId": "Safe_01",
+   "isSafe": false,
+   "color": "009E3D",
+   "properties": [
       {
-         "type":"options",
-         "title":"Project",
-         "selectedOption":null,
-         "id":"Project_Safe",
-         "hint":"optional",
-         "IsRequired":"true",
-         "default":"Jon",
-         "options":[
+         "type": "options",
+         "title": "Project",
+         "selectedOption": null,
+         "id": "Project_Safe",
+         "hint": "optional",
+         "IsRequired": "true",
+         "isSafe": false,
+         "default": "Jon",
+         "options": [
             {
-               "title":"Default Project",
-               "isVisibleForOptions":null,
-               "id":"",
-               "iconUrl":"",
-               "hasEmptyValue":true
+               "title": "Default Project",
+               "isVisibleForOptions": null,
+               "id": "",
+               "iconUrl": "",
+               "hasEmptyValue": true
             },
             {
-               "title":"Vestas",
-               "isVisibleForOptions":null,
-               "id":"aHh1J000000006jSAA",
-               "iconUrl":"",
-               "hasEmptyValue":false
+               "title": "Vestas",
+               "isVisibleForOptions": null,
+               "id": "aHh1J000000006jSAA",
+               "iconUrl": "",
+               "hasEmptyValue": false
             },
             {
-               "title":"Sandbox Test",
-               "isVisibleForOptions":null,
-               "id":"aHh7j000000Kz73CAC",
-               "iconUrl":"",
-               "hasEmptyValue":false
+               "title": "Sandbox Test",
+               "isVisibleForOptions": null,
+               "id": "aHh7j000000Kz73CAC",
+               "iconUrl": "",
+               "hasEmptyValue": false
             }
          ]
       },
       {
-         "type":"options",
-         "title":"Category",
-         "selectedOption":null,
-         "id":"Category_Safe",
-         "hint":"required",
-         "IsRequired":"true",
-         "default":"Jon",
-         "options":[
+         "type": "options",
+         "title": "Category",
+         "selectedOption": null,
+         "id": "Category_Safe",
+         "hint": "required",
+         "IsRequired": "true",
+         "isSafe": false,
+         "default": "Jon",
+         "options": [
             {
-               "title":"Category 1",
-               "isVisibleForOptions":null,
-               "id":"",
-               "iconUrl":"",
-               "hasEmptyValue":true
+               "title": "Category 1",
+               "isVisibleForOptions": null,
+               "id": "",
+               "iconUrl": "",
+               "hasEmptyValue": true
             },
             {
-               "title":"Category 2",
-               "isVisibleForOptions":null,
-               "id":"aHh1J000000006jSAA",
-               "iconUrl":"",
-               "hasEmptyValue":false
+               "title": "Category 2",
+               "isVisibleForOptions": null,
+               "id": "aHh1J000000006jSAA",
+               "iconUrl": "",
+               "hasEmptyValue": false
             },
             {
-               "title":"Category 3",
-               "isVisibleForOptions":null,
-               "id":"aHh7j000000Kz73CAC",
-               "iconUrl":"",
-               "hasEmptyValue":false
+               "title": "Category 3",
+               "isVisibleForOptions": null,
+               "id": "aHh7j000000Kz73CAC",
+               "iconUrl": "",
+               "hasEmptyValue": false
             }
          ]
       },
       {
-         "type":"options",
-         "title":"Saving Rule",
-         "selectedOption":null,
-         "id":"SavingRule_Safe",
-         "hint":"required",
-         "IsRequired":"true",
-         "default":"Jon",
-         "options":[
+         "type": "options",
+         "title": "Saving Rule",
+         "selectedOption": null,
+         "id": "SavingRule_Safe",
+         "hint": "required",
+         "IsRequired": "true",
+         "isSafe": false,
+         "default": "Jon",
+         "options": [
             {
-               "title":"Driving",
-               "isVisibleForOptions":null,
-               "id":"aHh1J000000006jSAA",
-               "iconUrl":"",
-               "hasEmptyValue":false
+               "title": "Driving",
+               "isVisibleForOptions": null,
+               "id": "aHh1J000000006jSAA",
+               "iconUrl": "",
+               "hasEmptyValue": false
             },
             {
-               "title":"Bypassing Safety Controls",
-               "isVisibleForOptions":null,
-               "id":"",
-               "iconUrl":"",
-               "hasEmptyValue":true
+               "title": "Bypassing Safety Controls",
+               "isVisibleForOptions": null,
+               "id": "",
+               "iconUrl": "",
+               "hasEmptyValue": true
             },
-
             {
-               "title":"Line of fire",
-               "isVisibleForOptions":null,
-               "id":"aHh7j000000Kz73CAC",
-               "iconUrl":"",
-               "hasEmptyValue":false
+               "title": "Line of fire",
+               "isVisibleForOptions": null,
+               "id": "aHh7j000000Kz73CAC",
+               "iconUrl": "",
+               "hasEmptyValue": false
             }
          ]
       },
       {
-         "type":"text",
-         "title":"Description",
-         "selectedOption":null,
-         "id":"Description_Safe",
-         "hint":"optional",
-         "IsRequired":"false",
-         "default":"Jon",
-         "options":[
+         "type": "text",
+         "title": "Description",
+         "selectedOption": null,
+         "id": "Description_Safe",
+         "hint": "optional",
+         "IsRequired": "false",
+         "isSafe": false,
+         "default": "Jon",
+         "options": [
             {
-               "title":"Driving",
-               "isVisibleForOptions":null,
-               "id":"aHh1J000000006jSAA",
-               "iconUrl":"",
-               "hasEmptyValue":false
+               "title": "Driving",
+               "isVisibleForOptions": null,
+               "id": "aHh1J000000006jSAA",
+               "iconUrl": "",
+               "hasEmptyValue": false
             },
             {
-               "title":"Bypassing Safety Controls",
-               "isVisibleForOptions":null,
-               "id":"",
-               "iconUrl":"",
-               "hasEmptyValue":true
+               "title": "Bypassing Safety Controls",
+               "isVisibleForOptions": null,
+               "id": "",
+               "iconUrl": "",
+               "hasEmptyValue": true
             },
             {
-               "title":"Line of fire",
-               "isVisibleForOptions":null,
-               "id":"aHh7j000000Kz73CAC",
-               "iconUrl":"",
-               "hasEmptyValue":false
+               "title": "Line of fire",
+               "isVisibleForOptions": null,
+               "id": "aHh7j000000Kz73CAC",
+               "iconUrl": "",
+               "hasEmptyValue": false
             }
          ]
+      },
+      {
+         "type": "chekbox",
+         "title": "L1__c",
+         "selectedOption": null,
+         "IsSelected": false,
+         "id": "Checkbox_L1_Safe",
+         "hint": "optional",
+         "IsRequired": "false",
+         "isSafe": false,
+         "default": "Jon",
+         "options": []
+      },
+      {
+         "type": "chekbox",
+         "title": "L2__c",
+         "selectedOption": null,
+         "IsSelected": false,
+         "id": "Checkbox_L2_Safe",
+         "hint": "optional",
+         "IsRequired": "false",
+         "isSafe": false,
+         "default": "Jon",
+         "options": []
       }
    ],
-   "buttons":[
+   "buttons": [
       {
-         "title":"Submit",
-         "color":"009E3D",
-         "action":null
+         "title": "Submit",
+         "color": "009E3D",
+         "action": null
       }
    ]
 }
